@@ -21,5 +21,5 @@ function code() {
 ```
 
 This is my contacts:
-* [my telegram](telegram.com/sehrormovzh)
+* [my telegram](telegram.com/)
 * [my instagram](instagram.com)
