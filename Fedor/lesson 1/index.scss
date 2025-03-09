@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin positionElement($x, $y) {
+  display: flex;
+  justify-content: $x;
+  align-items: $y;
+}
+
+header {
+  height: 20vh;
+  border: 0.1px solid black;
+  @include positionElement(center, center);
+  nav {
+    @include positionElement(center, center);
+    .nav_ul {
+      list-style-type: none;
+      @include positionElement(center, center);
+      column-gap: 20px;
+      .nav_li {
+        cursor: pointer;
+        padding: 10px 1px;
+        transition: 0.7s;
+        &:hover {
+          background-color: powderblue;
+          color: rebeccapurple;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.button {
+  padding: 10px 20px;
+  background-color: lightblue;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+}
+
+#counter {
+  font-size: 20px;
+  margin-top: 10px;
+}/*# sourceMappingURL=index.css.map */

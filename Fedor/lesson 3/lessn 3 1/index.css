@@ -1,0 +1,61 @@
+.main_div {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main_div .main_ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.main_div .main_ul .main_li {
+  transition: transform 0.5s ease;
+  height: 50vh;
+  width: 15vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main_div .main_ul .main_li:nth-child(1) {
+  background-color: rgb(239, 44, 78);
+}
+.main_div .main_ul .main_li:nth-child(1):hover {
+  background-color: rgba(239, 44, 78, 0.547);
+  cursor: crosshair;
+  transform: scale(1.23);
+}
+.main_div .main_ul .main_li:nth-child(2) {
+  background-color: rgb(188, 166, 7);
+}
+.main_div .main_ul .main_li:nth-child(2):hover {
+  background-color: rgba(188, 166, 7, 0.547);
+  cursor: crosshair;
+  transform: scale(1.23);
+}
+.main_div .main_ul .main_li:nth-child(3) {
+  background-color: rgb(252, 255, 232);
+}
+.main_div .main_ul .main_li:nth-child(3):hover {
+  background-color: rgba(252, 255, 232, 0.547);
+  cursor: crosshair;
+  transform: scale(1.23);
+}
+.main_div .main_ul .main_li:nth-child(4) {
+  background-color: rgb(129, 36, 165);
+}
+.main_div .main_ul .main_li:nth-child(4):hover {
+  background-color: rgba(129, 36, 165, 0.547);
+  cursor: crosshair;
+  transform: scale(1.23);
+}
+.main_div .main_ul .main_li:nth-child(5) {
+  background-color: rgb(166, 33, 43);
+}
+.main_div .main_ul .main_li:nth-child(5):hover {
+  background-color: rgba(166, 33, 43, 0.547);
+  cursor: crosshair;
+  transform: scale(1.23);
+}/*# sourceMappingURL=index.css.map */

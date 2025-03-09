@@ -1,0 +1,125 @@
+@font-face {
+  font-family: myStyle;
+  src: url("/font/QwitcherGrypen-Regular.ttf");
+}
+
+@mixin posElem() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2 {
+  font-family: myStyle;
+  font-size: 90px;
+}
+
+ul {
+  list-style-type: none;
+  min-height: 500px;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 10px;
+  li {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(90deg, rgb(195, 21, 21), rgb(203, 197, 197));
+    margin-top: 30px;
+  }
+}
+
+.task {
+  position: relative;
+  overflow: hidden;
+}
+
+.task::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -110%;
+  height: 0.1px;
+  width: 100%;
+  background: green;
+  border: 1px solid black;
+  transition: left 0.5s ease-in-out;
+}
+
+input[type="checkbox"]:checked ~ .task::before {
+  left: 0%;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+body {
+  position: relative;
+  background: linear-gradient(90deg, rgb(95, 95, 219), rgb(43, 190, 43));
+}
+
+button {
+  padding: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+button::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(247, 0, 255, 0.368);
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transition: 0.2s left ease-in-out;
+}
+
+button:hover::before {
+  cursor: ew-resize;
+  left: 0%;
+}
+
+.addTask {
+  font-size: 50px;
+  font-family: myStyle;
+}
+
+#loading {
+  @include posElem();
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: gray;
+  width: 100vw;
+  height: 100vh;
+  font-weight: 700;
+}
+
+main {
+  position: relative;
+  @include posElem();
+  gap: 10px;
+  ul {
+    width: 40%;
+  }
+}
+
+.altText{
+  position: absolute;
+  top: 20%;
+  left: 22%;
+}
+
+#tasks:not(li) ~ .altText{
+  display: block;
+}
+
+#tasks:has(li) ~ .altText{
+  display: none;
+}

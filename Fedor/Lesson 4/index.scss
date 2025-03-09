@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin borderElem() {
+  border: 1px solid black;
+}
+
+body {
+  display: grid;
+  grid-template-columns: auto 90% auto;
+  grid-template-areas: "header header header" ". main ." "footer footer footer";
+  grid-template-rows: 15vh 70vh 15vh;
+  row-gap: 5px;
+  & > * {
+    @include borderElem();
+  }
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ #test {
+  width: 100px;
+  height: 150px;
+  background-color: aqua;
+  transition: 1s ease;
+}

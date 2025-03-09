@@ -1,0 +1,42 @@
+body {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 15vh 70vh 15vh;
+  justify-content: center;
+  grid-template-areas: "header" "main" "footer";
+}
+
+header {
+  grid-area: header;
+  background: linear-gradient(0.5turn, aqua, rgb(13, 222, 13));
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+}
+
+main {
+  grid-area: main;
+  background: linear-gradient(0.5turn, rgb(13, 222, 13), rgb(255, 255, 30));
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
+footer {
+  grid-area: footer;
+  background: linear-gradient(0.5turn, rgb(255, 255, 30), rgb(255, 100, 126));
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+}/*# sourceMappingURL=index.css.map */

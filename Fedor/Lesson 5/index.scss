@@ -1,0 +1,88 @@
+.ddd {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin positionElement($x, $y) {
+  display: flex;
+  justify-content: $x;
+  align-items: $y;
+}
+
+@mixin borderElem() {
+  border: 1px solid black;
+}
+
+.ddd {
+  display: grid;
+  grid-template-columns: 25vw 25vw 25vw 25vw;
+  grid-template-rows: 25vh 25vh 25vh 25vh;
+  border: 10;
+  border-color: black;
+  & > * {
+    @include borderElem();
+  }
+}
+
+header {
+  font-family: sigma;
+  height: 20vh;
+  border: 0.1px solid black;
+  @include positionElement(center, center);
+  nav {
+    @include positionElement(center, center);
+    .main_ul {
+      list-style-type: none;
+      @include positionElement(center, center);
+      column-gap: 20px;
+      .main_li {
+        cursor: pointer;
+        padding: 10px 1px;
+        transition: 0.7s;
+        &:hover {
+          box-shadow: 10px 5px 5px black;
+          background-color: powderblue;
+          color: rebeccapurple;
+        }
+      }
+    }
+  }
+}
+
+.container {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  max-width: 100%; /* Задайте нужную ширину */
+}
+
+.container img {
+  width: 10%;
+  height: auto;
+}
+
+.container .text {
+  font-family: sigma;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Цвет текста */
+  font-size: 34px; /* Размер текста */
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+@font-face {
+  font-family: sigma;
+  src: url("/font/QwitcherGrypen-Bold.ttf");
+}
+
+.font {
+  font-family: sigma;
+  display: flex;
+  justify-content: center;
+}

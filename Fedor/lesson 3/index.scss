@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@mixin posEL() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  @include posEL();
+  .main_div {
+    @include posEL();
+    gap: 10px;
+    flex-direction: column;
+    width: 70vw;
+    height: 30vh;
+    background-color: aquamarine;
+  }
+}
